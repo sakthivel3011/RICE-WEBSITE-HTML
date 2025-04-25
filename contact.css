@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('home2.jpg') no-repeat center center fixed;
+    color: #333;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.contact-section h2 {
+    color: #2E7D32;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact-section .form-control {
+    border: 2px solid #FBC02D;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-section .form-control:focus {
+    border-color: #2E7D32;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+}
+
+.contact-section .btn {
+    background-color: #2E7D32;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-section .btn:hover {
+    background-color: #FBC02D;
+    color: #2E7D32;
+}
+
+/* Contact Info */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-info i {
+    color: #2E7D32;
+    margin-right: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(46, 125, 50, 0.8); /* Green with transparency */
+    color: #fff;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: #FBC02D; /* Yellow */
+    color: #2E7D32; /* Dark Green */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Map Section */
+.map-section {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.map-section h2 {
+    margin-bottom: 20px;
+    color: #2E7D32;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+button {
+    background-color: green;
+    color: white;
+    border: none; /* Removes black border */
+    padding: 10px 20px;
+    border-radius: 20px; /* Curved corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: chocolate;
+    color: black;
+  }
+  
+  

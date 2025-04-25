@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT - SRI ANNAKAMATCHI TRADERS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="payment-container">
+        <header class="payment-header">
+            <div class="logo-container">
+                <img src="icon.png" alt="Company Logo" class="logo">
+                <h1>Checkout</h1>
+            </div>
+            <div class="progress-steps">
+                <div class="step active"><span>1</span> Cart</div>
+                <div class="step active"><span>2</span> Details</div>
+                <div class="step active"><span>3</span> Payment</div>
+                <div class="step"><span>4</span> Complete</div>
+            </div>
+        </header>
+
+        <main class="payment-main">
+            <div class="order-section">
+                <section class="order-summary">
+                    <h2><i class="fas fa-shopping-basket"></i> Your Order</h2>
+                    <div id="payment-items-list" class="payment-items"></div>
+                </section>
+
+                <section class="delivery-section">
+                    <h2><i class="fas fa-truck"></i> Delivery Information</h2>
+                    <form id="delivery-form" class="delivery-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Delivery Address</label>
+                            <textarea id="address" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Delivery Notes (Optional)</label>
+                            <textarea id="notes" rows="2"></textarea>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <div class="payment-section">
+                <section class="payment-summary">
+                    <h2><i class="fas fa-file-invoice-dollar"></i> Order Summary</h2>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="payment-subtotal">Rs. 0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (5%)</span>
+                            <span id="payment-tax">Rs. 0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery Fee</span>
+                            <span>Rs. 50.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="payment-total">Rs. 50.00</span>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods">
+                        <h3><i class="fas fa-credit-card"></i> Payment Method</h3>
+                        <div class="method-option active">
+                            <input type="radio" id="cod" name="paymentMethod" checked>
+                            <label for="cod">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Cash on Delivery</span>
+                            </label>
+                        </div>
+                        <div class="method-option">
+                            <input type="radio" id="card" name="paymentMethod">
+                            <label for="card">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Credit/Debit Card</span>
+                            </label>
+                        </div>
+                        <div id="card-details" class="payment-details" style="display: none;">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-name">Name on Card</label>
+                                <input type="text" id="card-name" placeholder="John Doe">
+                            </div>
+                            <div class="card-row">
+                                <div class="form-group">
+                                    <label for="card-expiry">Expiry Date</label>
+                                    <input type="text" id="card-expiry" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvv">CVV</label>
+                                    <input type="text" id="card-cvv" placeholder="123">
+                                </div>
+                            </div>
+                            <div class="card-icons">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" style="width: 50px;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" style="width: 50px;">
+                            </div>
+                        </div>
+                        <div class="method-option">
+                            <input type="radio" id="upi" name="paymentMethod">
+                            <label for="upi">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>UPI Payment</span>
+                            </label>
+                        </div>
+                        <div id="upi-details" class="payment-details" style="display: none;">
+                            <div class="qr-code">
+                                <h4>OR Scan QR Code</h4>
+                                <div class="qr-placeholder">
+                                    <img src="gpay.jpg" alt="QR Code">
+                                    <p>Scan this QR code with any UPI app</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="confirm-order-btn" class="btn-primary">
+                        <i class="fas fa-lock"></i> Confirm & Pay
+                    </button>
+                </section>
+            </div>
+        </main>
+
+        <footer class="payment-footer">
+            <p>&copy; 2025 SRI ANNAKAMATCHI TRADERS. All Rights Reserved.</p>
+            <div class="secure-payment">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure Payment</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>
