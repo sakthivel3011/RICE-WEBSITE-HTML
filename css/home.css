@@ -203,7 +203,8 @@ a {
 .modern-hero {
   height: 100vh;
   min-height: 700px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('rice1.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/home1.jpg'); /* Absolute path from web root */
+    background-color: #222; /* fallback color */
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
