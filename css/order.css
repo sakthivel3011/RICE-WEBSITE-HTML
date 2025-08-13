@@ -221,7 +221,7 @@ footer {
 }
  /* Set background image for the page */
  body {
-  background: url('home3.jpg') no-repeat center center fixed;
+  background: url('../image/home3.jpg') no-repeat center center fixed;
   background-size: cover;
   background-attachment: scroll; /* instead of fixed */
   will-change: opacity;
